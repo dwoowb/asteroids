@@ -9,7 +9,7 @@
       Bullet.COLOR)
   };
 
-  Bullet.RADIUS = 5;
+  Bullet.RADIUS = 3;
   Bullet.COLOR = "brown";
   Bullet.SPEED = 20;
 
