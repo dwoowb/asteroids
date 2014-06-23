@@ -13,7 +13,7 @@
   Asteroid.randomColor = function() {
     var random = Math.random();
     if (random <= 0.5) {
-      return "black";
+      return "gray";
     } else {
       return "red";
     };

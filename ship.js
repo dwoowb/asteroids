@@ -13,7 +13,7 @@
   Ship.inherits(Asteroids.MovingObject);
 
   Ship.RADIUS = 15;
-  Ship.COLOR = "green";
+  Ship.COLOR = "yellow";
 
   Ship.prototype.power = function(impulse) {
     this.vel[0] += impulse[0];
