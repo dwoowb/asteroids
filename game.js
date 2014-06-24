@@ -8,9 +8,9 @@
     this.ship = new Asteroids.Ship();
   }
 
-  Game.DIM_X = window.innerWidth; //add default
-  Game.DIM_Y = window.innerHeight; //add default
-  Game.FPS = 30; //add default
+  Game.DIM_X = window.innerWidth;
+  Game.DIM_Y = window.innerHeight;
+  Game.FPS = 30;
   Game.NUM_ASTEROIDS = window.innerWidth / 80;
 
   Game.prototype.addAsteroids = function(numAsteroids) {
@@ -51,6 +51,7 @@
     this.draw();
     this.checkShipCollisions();
     this.checkBulletCollisions();
+    this.checkWin();
   };
 
   Game.prototype.checkShipCollisions = function() {
@@ -59,9 +60,15 @@
                       return asteroid.isCollidedWith(game.ship);
                     });
     if (collision) {
-      window.alert("Game ovah.");
       game.stop();
-			
+      window.alert("Game over!");
+    };
+  };
+  
+  Game.prototype.checkWin = function() {
+    if (this.asteroids.length() === 0) {
+      game.stop();
+      window.alert("You win!");
     };
   };
 
@@ -79,6 +86,7 @@
 
   Game.prototype.removeAsteroid = function(asteroidIndex) {
     this.asteroids.splice(asteroidIndex, 1);
+    debugger
   };
 
   Game.prototype.removeBullet = function(bulletIndex) {
