@@ -52,9 +52,8 @@
   Asteroid.randomVel = function() {
     var dirX = ((Math.random() * 2) - 1);
     var dirY = ((Math.random() * 2) - 1);
-    var speedX = Asteroids.Game.DIM_X / 50 * Math.random();
-    var speedY = Asteroids.Game.DIM_Y / 50 * Math.random();
-    // check implementation later
+    var speedX = Asteroids.Game.DIM_X / 70 * Math.random();
+    var speedY = Asteroids.Game.DIM_Y / 70 * Math.random();
 
     return [dirX * speedX, dirY * speedY];
   }

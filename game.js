@@ -8,10 +8,10 @@
     this.ship = new Asteroids.Ship();
   }
 
-  Game.DIM_X = 800; //add default
-  Game.DIM_Y = 800; //add default
+  Game.DIM_X = window.innerWidth; //add default
+  Game.DIM_Y = window.innerHeight; //add default
   Game.FPS = 30; //add default
-  Game.NUM_ASTEROIDS = 10;
+  Game.NUM_ASTEROIDS = window.innerWidth / 80;
 
   Game.prototype.addAsteroids = function(numAsteroids) {
     for(var i = 0; i < numAsteroids; i++) {
@@ -61,6 +61,7 @@
     if (collision) {
       window.alert("Game ovah.");
       game.stop();
+			
     };
   };
 

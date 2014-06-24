@@ -14,24 +14,29 @@
   </head>
 
   <body>
-		<h1>Bouncy Asteroids</h1>
-		<h2>How to Play</h2>
-		<ul>
-			<li>
-				"w", "a", "s", "d" to move
-			</li>
-			<li>
-				space to shoot
-			</li>
-			<li>
-				Have fun!
-			</li>
-		</ul>
-    <canvas height="800" width="800"></canvas>
+		<section id="instructions">
+			<h1>Bouncy Asteroids</h1>
+			<h2>How to Play</h2>
+			<ul>
+				<li>
+					"w", "a", "s", "d" to move
+				</li>
+				<li>
+					space to shoot
+				</li>
+				<li>
+					Have fun!
+				</li>
+			</ul>
+		</section>
+		
+    <canvas></canvas>
 
      <script>
         var canvas = document.getElementsByTagName("canvas")[0];
         var ctx = canvas.getContext("2d");
+				ctx.canvas.width = window.innerWidth;
+				ctx.canvas.height = window.innerHeight;
         var game = new Asteroids.Game(ctx);
         game.start();
     </script>
